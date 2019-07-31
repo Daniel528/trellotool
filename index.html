@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSON</title>
+    <!-- <script src="activeboard.json"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="input-field">
+      <h5>JSON</h5>
+      <textarea id="json-input"></textarea>
+      <div class="date-range">
+        <h5>Bottom Date</h5>
+        <p>Day</p>
+        <p>Month</p>
+
+        <input type="number" id="bottom-day">
+        <input type="number" id="bottom-month">
+      </div>
+      <div class="date-range">
+          <h5>Top Date</h5>
+          <p>Day</p>
+          <p>Month</p>
+          <input type="number" id="top-day">
+          <input type="number" id="top-month">
+        </div>
+      <button onClick="submit()">Submit</button>
+    </div>
+    <div class="header">
+        <h1 id="team-name"></h1>
+        <p id="date-range"></p>     
+        
+    </div>
+    <button class='new-data'>Enter New Data</button>
+
+      <div class="dates">
+        <h2>Dates</h2>
+          <ul id="dates">
+            </ul>
+      </div>
+    
+      <div>
+        <h2 class="users-title">Users Contributing</h2>
+          <div id="members">
+
+          </div>
+      </div>
+
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"></script>
+      <script src="script.js"></script>
+  </body>
+</html>
