@@ -81,16 +81,25 @@ li{
   justify-self: right;
 }
 
+.input-overlay{
+  width:100vw;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,0.5);
+  display:grid;
+}
+
 .input-field{
-  position:fixed;
   background-color: white;
-  /* display: none; */
+position: relative;
   box-shadow: 0 0 20px 20px #00000061;
   padding:20px;
   width:75vw;
   height:75vh;
-  margin:auto;
-
+  justify-self:center;
+  align-self:center;
 }
 
 textarea{
@@ -100,16 +109,30 @@ textarea{
   margin-bottom: 15px;
 }
 
-.input-field > button{
+.submit, .close{
   padding:10px;
   font-size:14px;
   font-weight:bold;
-  color:blue;
   cursor:pointer;
   position: absolute;
   bottom:10px;
-  right:10px;
+  border-radius:10px;
 }
+
+.submit{
+  right:10px;
+  color:white;
+  background-color: blue;
+
+}
+
+.close{
+  right:150px;
+  color:#171717;
+  background-color: transparent;
+  border:solid 0.5px grey;
+}
+
 input[type=number]{
   padding:10px;
   font-size:18px;

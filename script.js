@@ -20,19 +20,20 @@ const text = {
 let inputOpen = false;
 
 document.querySelector('.new-data').onclick = (e) => {
-  $('.input-field').toggle();
+  $('.input-overlay').toggle();
 
 }
 
 const unMount = () => {
   $('#dates').empty();
   $('#members').empty();
+  $('.input-overlay').toggle();
+
 }
 
 const submit = () => {
   unMount()
   main(JSON.parse(document.querySelector('#json-input').value))
-  $('.input-field').toggle();
 
 }
 
@@ -73,8 +74,8 @@ const main = (data) => {
 
 const domChanges = (name, dates, members, dateRange) => {
   $('#team-name').html(name)
-  $('#date-range').html(`Date Range: ${dateRange.before[0]}-${dateRange.before[1]} to 
-  ${dateRange.after[0]}-${dateRange.after[1]}`)
+  $('#date-range').html(`Date Range: ${document.querySelector('#bottom-day').value}-${document.querySelector('#bottom-month').value} to 
+  ${document.querySelector('#top-day').value}-${document.querySelector('#top-month').value}`)
   dates.map(x => {
     $('#dates').append(`<li>${x}</li>`) 
   })
