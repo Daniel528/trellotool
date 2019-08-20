@@ -59,7 +59,6 @@ const submit = () => {
 let memberList = undefined;
 
 const main = (data) => {
-  // console.log(data)
   const actions = data.actions
   memberList = data.members;
   const members = new Map();
@@ -128,12 +127,7 @@ const domChanges = (name, dates, members) => {
   })
 }
 
-
-
 const betweenDates = (date) => {
-  // const floor = [bottomDay.value, bottomMonth.value];
-  // const ceiling = [topDay.value, topMonth.value];
-
   if(date[1] < bottomMonth.value) return false;
   if(date[1] == bottomMonth.value){
     if(date[0] < bottomDay.value) return false;
@@ -145,14 +139,3 @@ const betweenDates = (date) => {
   }
   return true;
 }
-
-
-// const getName = (id) => {
-//   if(memberList == undefined) return;
-
-//   memberList.map( x => {
-//     if(x.id == id) {
-//       return x.fullName
-//     }
-//   })
-// }
